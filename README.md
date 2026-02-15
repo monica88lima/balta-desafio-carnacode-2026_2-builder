@@ -3,7 +3,7 @@
 
 ## 🥁 CarnaCode 2026 - Desafio 02 - Builder
 
-Oi, eu sou o [seu nome aqui] e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **CarnaCode 2026**, realizado pelo [balta.io](https://balta.io). 👻
+Oi, eu sou a Mônica e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **CarnaCode 2026**, realizado pelo [balta.io](https://balta.io). 👻
 
 Aqui você vai encontrar projetos, exercícios e códigos que estou desenvolvendo durante o desafio. O objetivo é colocar a mão na massa, testar ideias e registrar minha evolução no mundo da tecnologia.
 
@@ -27,3 +27,28 @@ Minha principal fonte de conhecimento durante o desafio foi o eBook gratuito [Fu
 
 ### Veja meu progresso no desafio
 [Incluir link para o repositório central]
+
+### Builder 
+O Builder Pattern é um padrão de projeto criacional que facilita a construção de objetos complexos.
+Ele separa a lógica de construção da representação final, permitindo criar diferentes variações de um mesmo objeto sem precisar de construtores gigantes.
+
+## 🎯 Problema que ele resolve
+- Construtores com dezenas de parâmetros.
+- Uso excessivo de setters, sem garantia de que propriedades obrigatórias foram definidas.
+- Repetição de código ao criar objetos semelhantes.
+- Dificuldade de leitura e manutenção
+
+⚙️ Como funciona
+- Builder (concreto): sabe como montar o objeto passo a passo.
+Ex.: SalesReportBuilder que configura título, formato, período, colunas, filtros etc.
+- Director: orquestra o uso do Builder para criar objetos pré-configurados.
+Ex.: DirectorReportsSimple que monta relatórios “Simples”, “Com Gráficos” ou “Completo” sem que o cliente precise repetir código.
+- Objeto final: é retornado pelo método ou Generate(), pronto para uso.
+
+✨ Particularidades no projeto
+- SalesReport: classe de domínio que representa o relatório (modelo).
+- ISaleReportBuilder: interface que define os métodos de construção.
+- SalesReportBuilder: implementação concreta do builder, responsável por montar o relatório.
+- DirectorReportsSimple: encapsula relatórios pré-configurados (simples, completo, com gráficos), garantindo consistência e reutilização.
+
+
